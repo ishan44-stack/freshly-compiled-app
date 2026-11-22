@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PIXELWINGS — Deliver. Compete. Upgrade.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="arcade-shell">
+    <header class="hud">
+      <div class="hud-brand">PIXELWINGS</div>
+      <div class="hud-stats">
+        <div class="hud-item">
+          <span class="label">SCORE</span>
+          <span id="hud-score" class="value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">DELIVERIES</span>
+          <span id="hud-deliveries" class="value">0 / 5</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">TIME</span>
+          <span id="hud-timer" class="value">60s</span>
+        </div>
+      </div>
+    </header>
 
+    <main class="stage-wrapper">
+      <canvas id="game-canvas" width="800" height="576"></canvas>
+
+      <!-- Status Toast -->
+      <div id="status-banner" class="status-banner">FLY TO WAREHOUSE (W) &amp; PRESS SPACE</div>
+
+      <!-- Start / End Overlay -->
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <h1 id="overlay-title">PIXELWINGS</h1>
+          <p id="overlay-subtitle" class="tagline">DELIVER. COMPETE. UPGRADE.</p>
+          <div id="overlay-details" class="overlay-details">
+            <p>Deliver <strong>5 packages</strong> before the 60s timer runs out.</p>
+            <p class="controls-hint">MOVE: WASD / ARROWS &nbsp;|&nbsp; PICKUP / DROP: SPACE</p>
+          </div>
+          <button id="overlay-btn" class="pixel-btn">START SHIFT</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
